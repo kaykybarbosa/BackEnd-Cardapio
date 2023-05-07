@@ -34,15 +34,7 @@ public class FoodController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @DeleteMapping("/{title}")
     public void deleteFood(@PathVariable String title){
-
         Food foodDelete = repository.findByTitle(title);
-
         repository.delete(foodDelete);
-
-       // return false;
-
-        //Food foodDelete = repository.findAll().get(id);
-       // repository.delete(foodDelete);
-       // return;
     }
 }
